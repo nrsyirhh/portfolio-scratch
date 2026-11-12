@@ -8,6 +8,11 @@ font-family: 'Aston';
     src: url('/fonts/Aston.ttf');
 }
 
+@font-face {
+    font-family: 'Papernotes';
+    src: url(/fonts/Papernotes.otf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -29,7 +34,7 @@ header{
     align-items: center; /* bagi dia align dan center dalam 1 baris */
     justify-content: center;
     gap: 2rem;
-    background-color: #779238;
+    background-color: rgba(95, 95, 65, 0.268);
     padding: 0.5rem 2rem;
     backdrop-filter: blur(10px); /* untuk glass effect */
     color: white; /* text color */
@@ -65,6 +70,7 @@ body{
 
 li a{
     display: flex;
+    font-family: 'Papernotes';
     align-items: center;
     justify-content: center;
     line-height: 1;
@@ -86,6 +92,8 @@ li a::before{
 
 li a:hover::before{
     width: 100%;
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+    transform: translate3d(0, 2px, 0);
 }
 
 menu-icon{
@@ -120,53 +128,59 @@ section{
     position: absolute;
     inset: 17% 12%; 
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
     gap: 3rem;
-    margin:auto;
-    padding: 10px;
+    box-sizing: border-box;
+    padding: 0px;
 }
 
 .info-box{
     display: flex;
-    flex: 2;
+    flex: 1;
     flex-direction: column; /* kebawah */
-    align-items: start;
+    align-items: flex-start;
     justify-content: center;
-    gap: 0.6rem;
 }
 
 .info-box h1{
-    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-family: 'Aston';
     color: black;
     font-weight: 300;
-    margin: 0;
     padding: 1.2rem;
     line-height: 1.1;
 }
 .info-box h2{
-    display: flex;
-    font-size: clamp(2rem, 2vw, 1.5rem);
+    font-size: clamp(2rem, 1.6vw, 1.3rem);
     font-weight:400;
     margin: 0;
+    gap: 0.6rem;
     font-family: 'Handwritten';
 }
 
 .info-box p{
-    font-size: clamp(1.2rem, 2vw, 1.3rem);
-    line-height: 1.5;
+    font-size: clamp(1rem, 1.6vw, 1.3rem);
+    line-height: 1.7;
+    gap: 0.6rem;
+    padding: 1rem;
+    max-width: 60ch;
     font-family: 'Handwritten';
 }
-
+.actions{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
 .btn-group{
     display: flex;
     text-align: center;
     align-items: center;
     gap: 1rem;
 }
-
-.btn{
+.info-btn{
     padding: 0.4rem 1.2rem;
     cursor: pointer;
     font-weight: 500;
@@ -175,25 +189,43 @@ section{
     background-color: #f798983d;
     justify-content: center;
     font-size: clamp(0..8rem, 1.4vw, 1rem);
+  background-color: #EEE3CC;
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  display: inline-block;
+  font-family: 'Handwritten';
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.btn:hover{
-    background-color: #779238; /*button color */
-    color: white; /*text color */
+.info-btn:hover {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
 }
 
+.info-btn:focus {
+  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+}
 .socials{
     display: flex;
-    gap: 2rem;
-    font-size: 1.5rem;
+    gap: 1rem;
+    flex-direction: end;
 }
 
 .socials i{
-    font-size: 2rem;
     cursor: pointer;
     transition: 0.5s ease-in-out;
 }
 .socials i:hover{
-    transform: scale(1.1);
-    color: #779238;
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0); 
 }
