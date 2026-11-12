@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'Handwritten';
+    src: url('/fonts/handwritten.otf');
+}
+
+@font-face {
+font-family: 'Aston';
+    src: url('/fonts/Aston.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +17,8 @@
     scroll-behavior: smooth;
     list-style: none;
 }
+
+
 
 header{
     position: fixed; /* make sure dia fixed to top */
@@ -25,6 +37,12 @@ header{
     z-index: 1000; 
 }
 
+body{
+    background-image: url('/media/paper-bg.avif');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 /*
 .logo img{
     width:150px;
@@ -73,4 +91,109 @@ li a:hover::before{
 menu-icon{
     font-size: 2rem;
     display:none;
+}
+
+section{
+    min-height: 100vh;
+    padding: 8rem 12%; /* topbot: 8rem 12%for sides */
+    width: 100%;
+    position: relative;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.frame{
+    position: relative;
+  width: min(92%, 1000px);
+  aspect-ratio: 3/2; 
+  margin: 0 auto;
+  background: url('media/lace.webp') center / 100% 100% no-repeat; 
+}
+
+.about .about-container{
+    position: absolute;
+    inset: 17% 12%; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin:auto;
+    padding: 10px;
+}
+
+.info-box{
+    display: flex;
+    flex: 2;
+    flex-direction: column; /* kebawah */
+    align-items: start;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.info-box h1{
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-family: 'Aston';
+    color: black;
+    font-weight: 300;
+    margin: 0;
+    padding: 1.2rem;
+    line-height: 1.1;
+}
+.info-box h2{
+    display: flex;
+    font-size: clamp(2rem, 2vw, 1.5rem);
+    font-weight:400;
+    margin: 0;
+    font-family: 'Handwritten';
+}
+
+.info-box p{
+    font-size: clamp(1.2rem, 2vw, 1.3rem);
+    line-height: 1.5;
+    font-family: 'Handwritten';
+}
+
+.btn-group{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn{
+    padding: 0.4rem 1.2rem;
+    cursor: pointer;
+    font-weight: 500;
+    text-wrap: nowrap;
+    transition: 0.5s ease;
+    background-color: #f798983d;
+    justify-content: center;
+    font-size: clamp(0..8rem, 1.4vw, 1rem);
+}
+
+.btn:hover{
+    background-color: #779238; /*button color */
+    color: white; /*text color */
+}
+
+.socials{
+    display: flex;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+.socials i{
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+.socials i:hover{
+    transform: scale(1.1);
+    color: #779238;
 }
