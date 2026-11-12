@@ -17,7 +17,7 @@ font-family: 'Aston';
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins";
+    font-family: "Papernotes";
     text-decoration: none;
     scroll-behavior: smooth;
     list-style: none;
@@ -228,4 +228,67 @@ section{
 .socials i:hover{
     box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0); 
+}
+
+.section-title{
+    text-align: center;
+    font-size: 4rem;
+    word-spacing: 2rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+}
+.education-info{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 3rem;
+    position: relative;
+  width: min(92%, 1000px);
+  margin: 0 auto;
+  background: url(/media/pink-wallpaper.jpg);
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+}
+.education img{
+    width: 24 vw;
+}
+
+.grid{
+    display: grid;
+    gap: 2rem;
+    color: rgb(0, 0, 0);
+}
+
+.grid-card{
+  background: url(media/paper.jpg);
+  border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+  border-style: solid;
+  border-width: 2px;
+  padding: 1rem;
+  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 235ms ease-in-out;
+  border-bottom-left-radius: 15px 255px;
+  border-bottom-right-radius: 225px 15px;
+  border-top-left-radius: 255px 15px;
+  border-top-right-radius: 15px 225px;
+}
+
+.grid-card:hover{
+    box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  transform: translate3d(0, 2px, 0);
+}
+
+.grid-card h3{
+    font-weight: 100;
+    gap: 2rem;
+}
+
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+    display: none;
 }
